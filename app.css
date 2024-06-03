@@ -97,14 +97,13 @@ body {
 .description__title {
   font-family: "young-serif";
   font-size: 40px;
-  font-weight: 400;
+  line-height: 100%;
   color: #312E2C;
 }
 
 .description__caption {
   font-family: "Outfit";
   font-size: 16px;
-  font-weight: 400;
   color: #5F564D;
 }
 
@@ -118,6 +117,7 @@ body {
   font-family: "Outfit-SemiBold";
   font-size: 20px;
   margin-bottom: 16px;
+  line-height: 100%;
 }
 
 .preparation__bullets {
@@ -134,6 +134,7 @@ li {
   display: flex;
   align-items: center;
   line-height: 150%;
+  color: #5F564D;
 }
 
 li::before {
@@ -147,6 +148,7 @@ li::before {
 
 .topic {
   font-family: "Outfit-Bold";
+  display: inline;
 }
 
 .ingredients {
@@ -157,6 +159,7 @@ li::before {
 
 .ingredients__title {
   font-size: 28px;
+  line-height: 100%;
   color: #854632;
 }
 
@@ -167,6 +170,55 @@ li::before {
   padding: 0px;
   font-family: "Outfit";
   font-size: 16px;
+}
+
+hr {
+  border: 0px;
+  background-color: #E3DDD7;
+  height: 1px;
+  width: 100%;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.instructions__title {
+  line-height: 100%;
+  font-size: 28px;
+  color: #854632;
+}
+
+.instructions__bullets {
+  counter-reset: my-counter;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.instructions__bullets li {
+  counter-increment: my-counter;
+  font-family: "Outfit";
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.text {
+  display: inline-block;
+}
+
+.instructions__bullets li::before {
+  content: counter(my-counter) ".";
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  font-family: "Outfit-Bold";
+  flex-shrink: 0;
+  margin: 0px 16px 0px 8px;
 }
 
 /*# sourceMappingURL=app.css.map */
