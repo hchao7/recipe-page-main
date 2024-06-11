@@ -65,6 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin: 123px 0px 123px 0px;
   border-radius: 24px;
   width: 736px;
   height: auto;
@@ -102,6 +103,10 @@ body {
 
 .component--pink {
   background-color: #FFF7FB;
+}
+
+.component--rounded {
+  border-radius: 12px;
 }
 
 .component__title {
@@ -218,10 +223,8 @@ body {
 }
 
 @media only screen and (max-width: 375px) {
-  .component__title--big {
-    font-size: 36px;
-  }
   .recipe {
+    margin: 0px;
     border-radius: 0px;
   }
   .recipe__image {
@@ -231,6 +234,9 @@ body {
   }
   .recipe__text-content {
     margin: 0px 32px 32px 32px;
+  }
+  .component__title--big {
+    font-size: 36px;
   }
 }
 
