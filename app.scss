@@ -38,20 +38,22 @@ body {
 }
 
 .recipe {
+  // Layout
   display: flex;
   flex-direction: column;
   gap: 40px;
+
   border-radius: 24px;
   width: 736px;
   height: auto;
   background-color: hsl(0, 0%, 100%);
-  padding: 40px;
   font-family: 'young-serif';
 }
 
 .recipe__image {
   border-radius: 12px;
-  width: 100%;
+  margin: 40px 40px 0px 40px;
+  width: auto;
   height: 300px;
   object-fit: cover;
 }
@@ -60,9 +62,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin: 0px 40px 40px 40px;
 }
 
-.description {
+.component {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -70,33 +73,44 @@ body {
   height: auto;
 }
 
-.description__title{
-  font-family: 'young-serif';
-  font-size: 40px;
+.component--smaller {
+  gap: 16px;
+  padding: 28px;
+}
+
+.component--pink {
+  background-color: #FFF7FB;
+}
+
+.component__title {
+  font-size: 28px;
   line-height: 100%;
+  color: #854632;
+}
+
+.component__title--small {
+  font-size: 20px;
+}
+
+.component__title--font-Outfit {
+  font-family: "Outfit-SemiBold";
+}
+
+.component__title--big {
+  font-size: 40px;
+}
+
+.component__title--black {
   color: #312E2C;
 }
 
-.description__caption {
-  font-family: 'Outfit';
+.component__text {
+  font-family: "Outfit";
   font-size: 16px;
   color: #5F564D;
 }
 
-.preparation {
-  background-color: #FFF7FB;
-  padding: 28px;
-}
-
-.preparation__title {
-  color: #7A284E;
-  font-family: "Outfit-SemiBold";
-  font-size: 20px;
-  margin-bottom: 16px;
-  line-height: 100%;
-}
-
-.preparation__bullets {
+.component__list {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -105,100 +119,98 @@ body {
   font-size: 16px;
 }
 
-li {
-  height: 100%;
+.component__list--numbers {
+  counter-reset: my-counter;
+}
+
+.component__list-item {
   display: flex;
   align-items: center;
+  height: 100%;
   line-height: 150%;
   color: #5F564D;
 }
 
-li::before {
-  content: "\25CF";
-  color: #7A284E;
-  font-size: 8px;
-  display: inline-block;
-  width: 16px;
-  margin: 0px 16px 0px 8px;
-}
-
-.topic {
-  font-family: "Outfit-Bold";
-  // border: 1px solid lightblue;
-  display: inline;
-}
-
-.ingredients{
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.ingredients__title {
-  font-size: 28px;
-  line-height: 100%;
-  color: #854632;
-}
-
-.ingredients__bullets {
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-  padding: 0px;
-  font-family: "Outfit";
-  font-size: 16px;
-}
-
-hr {
-  border: 0px;
-  background-color: #E3DDD7;
-  height: 1px; 
-  width: 100%;
-}
-
-.instructions {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.instructions__title{
-  line-height: 100%;
-  font-size: 28px;
-  color: #854632;
-}
-
-.instructions__bullets {
-  counter-reset: my-counter;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.instructions__bullets li{
+.component__list-item--numbers {
   counter-increment: my-counter;
+}
+
+.component__list-item--align-top {
+  align-items: flex-start;
+}
+
+.component__list-item::before {
+  content: "\25CF";
+  display: inline-block;
+  width: 16px;
+  margin: 0px 16px 0px 8px;
+  font-size: 8px;
+  color: #7A284E;
+}
+
+.component__list-item--numbers::before {
+  content: counter(my-counter) ".";
+  flex-shrink: 0;
+  font-size: 16px;
+  font-family: "Outfit-Bold";
+}
+
+.component__list-item-topic {
+  display: inline;
+  font-family: "Outfit-Bold";
+  line-height: 150%;
+}
+
+.divider {
+  border: 0px;
+  width: 100%;
+  height: 1px; 
+  background-color: #E3DDD7;
+}
+
+.component__nutritional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.component__nutritional-info-row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.component__nutritional-topic{
+  width: 100%;
   font-family: "Outfit";
   font-size: 16px;
-  display: flex;
-  // border: 1px solid black;
-  align-items: flex-start;
-  // gap: 8px;
+  color: #5F564D;
 }
 
-.text {
-  // border: 1px solid black;
-  display: inline-block;
-}
-
-//"li:: before" is a child of ".instructions_bullets li"
-.instructions__bullets li::before{
-  content: counter(my-counter) ".";
-  display: inline-block;
-  font-size: 16px;
-  width: 16px;
+.component__nutritional-measure{
+  width: 100%;
   font-family: "Outfit-Bold";
-  // border: 1px solid hotpink;
-  flex-shrink: 0;
-  margin: 0px 16px 0px 8px;
+  color: #7A284E;
+}
+
+@media only screen and (max-width: 375px) {
+  .component__title--big {
+    font-size: 36px;
+  }
+  
+  .recipe {
+    border-radius: 0px;
+  }
+
+  .recipe__image {
+    border-radius: 0px;
+    margin: 0px;
+    height: 171px;
+  }
+
+  .recipe__text-content {
+    margin: 0px 32px 32px 32px;
+  }
 }
