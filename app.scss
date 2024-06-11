@@ -88,7 +88,7 @@ body {
 
 .component__title {
   font-size: 28px;
-  line-height: 100%;
+  line-height: 1;
   color: #854632;
 }
 
@@ -106,6 +106,10 @@ body {
 
 .component__title--black {
   color: #312E2C;
+}
+
+.component__title--pink {
+  color: #7A284E;
 }
 
 .component__text {
@@ -131,7 +135,7 @@ body {
   display: flex;
   align-items: center;
   height: 100%;
-  line-height: 150%;
+  line-height: 1.5;
   color: #5F564D;
 }
 
@@ -162,7 +166,7 @@ body {
 .component__list-item-topic {
   display: inline;
   font-family: "Outfit-Bold";
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 .divider {
