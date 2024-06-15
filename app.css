@@ -15,7 +15,7 @@
 
 body {
   line-height: 1.5;
-  /* -webkit-font-smoothing: antialiased; */
+  -webkit-font-smoothing: antialiased;
 }
 
 img, picture, video, canvas, svg {
@@ -86,7 +86,7 @@ body {
 .recipe__text-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 31.5px;
   margin: 0px 40px 40px 40px;
 }
 
@@ -181,11 +181,16 @@ body {
   color: #7A284E;
 }
 
+.component__list-item--red::before {
+  color: #854632;
+}
+
 .component__list-item--numbers::before {
   content: counter(my-counter) ".";
   flex-shrink: 0;
   font-size: 16px;
   font-family: "Outfit-Bold";
+  color: #854632;
 }
 
 .component__list-item-topic {
@@ -204,7 +209,7 @@ body {
 .component__nutritional-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 11.5px;
 }
 
 .component__nutritional-info-row {
