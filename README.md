@@ -23,7 +23,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/blog-preview-card-using-flexbox-bem-jnrQoLZrrv]
 - Live Site URL: [https://hchao7.github.io/recipe-page-main/]
 
 ## My process
